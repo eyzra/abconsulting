@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A.B Consulting — Developing People. Delivering Possibilities.</title>
-<meta name="description" content="A.B Consulting is the umbrella consultancy of Barnabas Amu, PhD — leadership coaching, corporate retreats, executive training and structured accountability programs for individuals and organizations.">
+<title>A.B Consulting: Developing People. Delivering Possibilities.</title>
+<meta name="description" content="A.B Consulting is the umbrella consultancy of Barnabas Amu, PhD; leadership coaching, corporate retreats, executive training and structured accountability programs for individuals and organizations.">
 <style>
 :root{
   --white:#FFFFFF;
@@ -41,7 +41,7 @@ p{margin:0}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease}
 .reveal.in{opacity:1;transform:translateY(0)}
 
-/* ── NAV ── */
+/* NAV */
 .nav{position:fixed;top:0;left:0;right:0;z-index:1000;
   background:rgba(255,255,255,.55);
   backdrop-filter:blur(22px) saturate(180%);
@@ -72,7 +72,7 @@ p{margin:0}
 .mobile-panel a{padding:14px 0;font-size:16px;border-bottom:1px solid var(--line-soft)}
 .mobile-panel.open{display:flex}
 
-/* ── BUTTONS ── */
+/* BUTTONS */
 .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:var(--r-sm);font-size:14px;font-weight:600;letter-spacing:.01em;transition:all .2s ease;border:1px solid transparent;white-space:nowrap}
 .btn-primary{background:var(--navy);color:var(--white)}
 .btn-primary:hover{background:var(--navy-deep);transform:translateY(-1px)}
@@ -83,7 +83,7 @@ p{margin:0}
 .btn-ghost:hover svg{transform:translateX(3px)}
 .btn-sm{padding:10px 18px;font-size:13px}
 
-/* ── HERO — lighter overlay, image from top ── */
+/* HERO */
 .hero{
   position:fixed;
   inset:0;
@@ -93,120 +93,119 @@ p{margin:0}
   overflow:hidden;
   display:flex;
   align-items:center;
-  /* FIX 1: lighter gradient so image reads clearly */
   background-image:
     linear-gradient(180deg, rgba(6,10,20,.30) 0%, rgba(6,10,20,.58) 50%, rgba(5,9,18,.75) 100%),
     url(asset/drbspeak.jpeg);
   background-size:cover;
-  /* FIX 2: top so the top of the photo shows through the nav */
   background-position:top center;
 }
-/* FIX 3: push hero content below nav height */
 .hero-inner{max-width:920px;position:relative;z-index:1;padding-top:74px}
-.hero .eyebrow{margin-bottom:16px;display:block;color:#B9C7E3;text-shadow:0 1px 12px rgba(0,0,0,.35)}
-.hero h1{font-size:clamp(46px,8vw,104px);line-height:0.98;letter-spacing:-.01em;color:var(--white);margin-bottom:22px;text-shadow:0 4px 28px rgba(0,0,0,.45)}
-.hero p.lead{font-size:18px;color:#E3E8F2;max-width:560px;margin-bottom:28px;line-height:1.65;text-shadow:0 2px 14px rgba(0,0,0,.4)}
+.hero .eyebrow{margin-bottom:14px;display:block;color:#B9C7E3;text-shadow:0 1px 12px rgba(0,0,0,.35)}
+.hero h1{font-size:clamp(46px,8vw,104px);line-height:0.98;letter-spacing:-.01em;color:var(--white);margin-bottom:16px;text-shadow:0 4px 28px rgba(0,0,0,.45)}
+/* visible tagline below headline */
+.hero-tagline{
+  font-family:var(--font-serif);
+  font-style:italic;
+  font-size:clamp(17px,2.2vw,24px);
+  color:rgba(255,255,255,.88);
+  margin-bottom:24px;
+  letter-spacing:.01em;
+  font-weight:400;
+  text-shadow:0 2px 12px rgba(0,0,0,.4);
+}
+.hero p.lead{font-size:17px;color:#D8E0EF;max-width:520px;margin-bottom:28px;line-height:1.65;text-shadow:0 2px 14px rgba(0,0,0,.4)}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:0}
 .hero .btn-primary{background:var(--white);color:var(--navy)}
 .hero .btn-primary:hover{background:var(--navy-tint)}
 .hero .btn-outline{border-color:rgba(255,255,255,.7);color:var(--white)}
 .hero .btn-outline:hover{background:var(--white);color:var(--navy);border-color:var(--white)}
 
-/* Curtain reveal */
 .page-content{position:relative;z-index:1;background:var(--white);margin-top:100vh}
 
 @media(max-height:680px){
-  .hero h1{font-size:clamp(38px,7vw,72px);margin-bottom:16px}
-  .hero p.lead{font-size:16px;margin-bottom:20px}
+  .hero h1{font-size:clamp(38px,7vw,72px);margin-bottom:12px}
+  .hero-tagline{font-size:16px;margin-bottom:16px}
+  .hero p.lead{font-size:15px;margin-bottom:18px}
   .hero-inner{padding-top:60px}
 }
 
-/* ── SOCIAL RAIL — fixed right side, fades at contact ── */
+/* SOCIAL RAIL */
 .social-rail{
-  position:fixed;
-  right:26px;
-  top:50%;
-  transform:translateY(-50%);
-  z-index:50;
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  transition:opacity .5s ease, visibility .5s ease;
-}
+  position:fixed;right:26px;top:50%;transform:translateY(-50%);
+  z-index:50;display:flex;flex-direction:column;gap:12px;
+  transition:opacity .5s ease, visibility .5s ease}
 .social-rail.hidden{opacity:0;visibility:hidden;pointer-events:none}
-.social-rail a{
-  width:38px;height:38px;
-  border-radius:50%;
-  background:rgba(255,255,255,.18);
-  backdrop-filter:blur(10px);
-  -webkit-backdrop-filter:blur(10px);
-  border:1px solid rgba(255,255,255,.3);
-  display:flex;align-items:center;justify-content:center;
-  transition:background .2s ease, transform .2s ease, border-color .2s ease;
-}
+.social-rail a{width:38px;height:38px;border-radius:50%;
+  background:rgba(255,255,255,.18);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;
+  transition:background .2s ease, transform .2s ease, border-color .2s ease}
 .social-rail a:hover{background:rgba(255,255,255,.34);transform:scale(1.1);border-color:rgba(255,255,255,.55)}
 .social-rail svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-/* When page scrolls into white sections, shift icons to navy */
 .social-rail.dark a{background:rgba(20,33,61,.07);border-color:rgba(20,33,61,.15)}
 .social-rail.dark a:hover{background:rgba(20,33,61,.12);border-color:rgba(20,33,61,.25)}
 .social-rail.dark svg{stroke:var(--navy)}
-/* Hide on small screens */
 @media(max-width:1140px){.social-rail{display:none}}
 
-/* ── STATS ── */
-.stats{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0}
-.stat{padding:36px 24px;text-align:left;border-left:1px solid var(--line)}
-.stat:first-child{border-left:none}
-.stat-num{font-family:var(--font-serif);font-style:italic;font-size:38px;color:var(--navy);display:block;margin-bottom:6px}
-.stat-label{font-size:12.5px;color:var(--charcoal-soft);letter-spacing:.02em}
-
-/* ── SECTION HEAD ── */
+/* SECTION HEAD */
 .shead{max-width:640px;margin-bottom:56px}
 .shead .eyebrow{margin-bottom:16px;display:block}
 .shead h2{font-size:clamp(32px,4vw,46px);line-height:1.08;color:var(--charcoal);font-weight:400}
 .shead h2 em{font-family:var(--font-serif);font-style:italic;color:var(--navy)}
 .shead p{margin-top:18px;font-size:16.5px;color:var(--charcoal-soft);line-height:1.7}
 
-/* ── SERVICE CARDS — expanded detailed grid ── */
-.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.svc-card{background:var(--navy-tint);border:1px solid var(--navy-tint-2);border-radius:var(--r-lg);padding:32px;display:flex;flex-direction:column;gap:0}
-.svc-card-top{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
-.svc-card-icon{flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:var(--white);border:1px solid var(--navy-tint-2);display:flex;align-items:center;justify-content:center}
-.svc-card-icon svg{width:18px;height:18px;stroke:var(--navy)}
-.svc-card-meta{flex:1}
-.svc-card-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--navy);background:var(--white);border:1px solid var(--navy-tint-2);padding:4px 10px;border-radius:20px;margin-bottom:8px}
-.svc-card h4{font-size:17px;font-weight:600;color:var(--charcoal);margin-bottom:0;line-height:1.3}
-.svc-card .svc-desc{font-size:14px;color:var(--charcoal-soft);line-height:1.65;margin-bottom:18px}
-.svc-card .svc-list{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-direction:column;gap:9px;border-top:1px solid var(--navy-tint-2);padding-top:18px}
-.svc-card .svc-list li{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:var(--charcoal-soft);line-height:1.5}
-.svc-card .svc-list svg{flex:0 0 auto;width:13px;height:13px;stroke:var(--navy);margin-top:2px}
-.svc-card .svc-cta{margin-top:auto}
-.svc-card .svc-cta a{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--navy);transition:gap .2s ease}
-.svc-card .svc-cta a svg{width:13px;height:13px;stroke:var(--navy);transition:transform .2s ease}
-.svc-card .svc-cta a:hover svg{transform:translateX(3px)}
+/* SERVICES: two-column accordion */
+.svc-two-col{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.svc-col{display:flex;flex-direction:column}
+.svc-col-head{padding:32px 32px 26px;border-bottom:1px solid var(--line)}
+.svc-col + .svc-col{border-left:1px solid var(--line)}
+.svc-col.org-col{background:var(--navy-tint)}
+.svc-col.org-col .svc-col-head{border-bottom-color:var(--navy-tint-2)}
+.track-tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--navy-tint);padding:5px 12px;border-radius:20px;margin-bottom:14px}
+.svc-col.org-col .track-tag{background:var(--white)}
+.svc-col-title{font-family:var(--font-serif);font-style:italic;font-size:22px;color:var(--charcoal);font-weight:400;margin-bottom:6px}
+.svc-col-desc{font-size:13.5px;color:var(--charcoal-soft);line-height:1.6}
 
-/* Org cards slightly different shade */
-.svc-card.org{background:var(--white);border-color:var(--line)}
+/* Accordion items */
+.acc-item{border-bottom:0.5px solid var(--line-soft)}
+.svc-col.org-col .acc-item{border-bottom-color:var(--navy-tint-2)}
+.acc-item:last-child{border-bottom:none}
+.acc-btn{width:100%;display:flex;align-items:center;gap:14px;padding:18px 32px;background:none;border:none;text-align:left;cursor:pointer;transition:background .15s ease}
+.acc-btn:hover{background:rgba(20,33,61,.04)}
+.svc-col.org-col .acc-btn:hover{background:rgba(20,33,61,.06)}
+.acc-btn-icon{flex:0 0 auto;width:32px;height:32px;border-radius:50%;background:var(--navy-tint);border:1px solid var(--navy-tint-2);display:flex;align-items:center;justify-content:center}
+.svc-col.org-col .acc-btn-icon{background:var(--white)}
+.acc-btn-icon svg{width:15px;height:15px;stroke:var(--navy);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.acc-title{flex:1;font-size:14.5px;font-weight:600;color:var(--charcoal);line-height:1.3}
+.acc-chevron{flex:0 0 auto;width:18px;height:18px;stroke:var(--charcoal-soft);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .25s ease}
+.acc-item.open .acc-chevron{transform:rotate(180deg)}
 
-@media(max-width:960px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:580px){.svc-grid{grid-template-columns:1fr}}
+/* Accordion body */
+.acc-body{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
+.acc-body-inner{padding:4px 32px 26px}
+.acc-desc{font-size:13.5px;color:var(--charcoal-soft);line-height:1.65;margin-bottom:14px}
+.acc-list{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-direction:column;gap:8px;border-top:1px solid var(--line-soft);padding-top:14px}
+.svc-col.org-col .acc-list{border-top-color:var(--navy-tint-2)}
+.acc-list li{display:flex;align-items:flex-start;gap:8px;font-size:13px;color:var(--charcoal-soft);line-height:1.5}
+.acc-list svg{flex:0 0 auto;width:12px;height:12px;stroke:var(--navy);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:3px}
+.acc-cta a{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--navy)}
+.acc-cta svg{width:12px;height:12px;stroke:var(--navy);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s ease}
+.acc-cta a:hover svg{transform:translateX(3px)}
 
-/* ── ABOUT ── */
+@media(max-width:820px){.svc-two-col{grid-template-columns:1fr}.svc-col + .svc-col{border-left:none;border-top:1px solid var(--line)}}
+
+/* ABOUT */
 .about{background:var(--navy-tint)}
 .about-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:start}
-.about-photo{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;
-  background:linear-gradient(160deg,#1B2D52 0%,#0A1222 100%);
-  border:1px solid var(--navy-tint-2)}
+.about-photo{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;background:linear-gradient(160deg,#1B2D52 0%,#0A1222 100%);border:1px solid var(--navy-tint-2)}
 .about-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .about h2{font-size:clamp(30px,3.6vw,42px);line-height:1.12;color:var(--charcoal);font-weight:400;margin-bottom:8px}
 .about h2 em{font-family:var(--font-serif);font-style:italic;color:var(--navy)}
 .about .role{font-size:14.5px;color:var(--navy);font-weight:600;margin-bottom:22px}
 .about p.bio{font-size:15.5px;color:var(--charcoal-soft);line-height:1.75;margin-bottom:18px}
 .about-quote{font-family:var(--font-serif);font-style:italic;font-size:20px;color:var(--navy);line-height:1.5;margin:28px 0 0;padding-left:20px;border-left:2px solid var(--navy)}
-@media(max-width:880px){.about-grid{grid-template-columns:1fr;gap:36px}.about-photo{aspect-ratio:16/9}}
+@media(max-width:880px){.about-grid{grid-template-columns:1fr;gap:36px}}
 
-/* ── EVENTS ── */
+/* EVENTS */
 .events{background:var(--navy-tint)}
 .event-list{display:flex;flex-direction:column;border-top:1px solid var(--navy-tint-2)}
 .event-row{display:grid;grid-template-columns:140px 1fr auto;align-items:center;gap:28px;padding:26px 0;border-bottom:1px solid var(--navy-tint-2)}
@@ -216,7 +215,7 @@ p{margin:0}
 .event-cadence{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);background:var(--white);border:1px solid var(--navy-tint-2);padding:5px 11px;border-radius:20px;white-space:nowrap}
 @media(max-width:700px){.event-row{grid-template-columns:1fr;gap:10px}.event-cadence{width:fit-content}}
 
-/* ── NEWSLETTER ── */
+/* NEWSLETTER */
 .news-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
 .news-grid h2{font-family:var(--font-serif);font-style:italic;font-size:clamp(30px,4vw,42px);color:var(--navy);margin-bottom:18px;font-weight:400}
 .news-grid p.desc{color:var(--charcoal-soft);font-size:15.5px;line-height:1.7;margin-bottom:28px;max-width:440px}
@@ -235,19 +234,19 @@ p{margin:0}
 .subst-card p{font-size:14px;color:var(--charcoal-soft);line-height:1.65;margin-bottom:22px}
 @media(max-width:880px){.news-grid{grid-template-columns:1fr;gap:40px}}
 
-/* ── QUOTE ── */
+/* QUOTE */
 .quote-section{padding:120px 0;text-align:center}
 .quote-mark{font-family:var(--font-serif);font-style:italic;font-size:80px;color:var(--navy-tint-2);line-height:0;margin-bottom:10px;display:block}
 .quote-text{font-family:var(--font-serif);font-style:italic;font-size:clamp(26px,4vw,40px);color:var(--navy);max-width:780px;margin:0 auto;line-height:1.4}
 .quote-by{margin-top:28px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--charcoal-soft)}
 
-/* ── COMMUNITY ── */
+/* COMMUNITY */
 .community{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .comm-inner{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap}
 .comm-inner h3{font-family:var(--font-serif);font-style:italic;font-size:28px;font-weight:400;color:var(--navy);max-width:480px}
 .comm-inner p{color:var(--charcoal-soft);font-size:14.5px;margin-top:10px;max-width:480px}
 
-/* ── FAQ ── */
+/* FAQ */
 .faq-list{border-top:1px solid var(--line)}
 .faq-item{border-bottom:1px solid var(--line)}
 .faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;background:none;border:none;padding:26px 0;text-align:left;font-size:17px;font-weight:500;color:var(--charcoal)}
@@ -259,12 +258,12 @@ p{margin:0}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
 .faq-a p{padding-bottom:26px;font-size:14.5px;color:var(--charcoal-soft);line-height:1.7;max-width:680px}
 
-/* ── CONTACT ── */
+/* CONTACT */
 .contact{background:var(--navy);color:var(--white);padding:120px 0}
 .contact .eyebrow{color:#9FB3D9}
 .contact h2{font-family:var(--font-serif);font-style:italic;font-size:clamp(34px,4.5vw,52px);color:var(--white);margin:18px 0 50px;font-weight:400;max-width:640px}
 .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:64px}
-.contact-tiles{display:flex;flex-direction:column;gap:0;border-top:1px solid rgba(255,255,255,.15)}
+.contact-tiles{display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.15)}
 .c-tile{display:flex;align-items:center;gap:16px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.15)}
 .c-tile.is-link{transition:opacity .15s ease}
 .c-tile.is-link:hover{opacity:.78}
@@ -281,7 +280,7 @@ p{margin:0}
 .c-form button:hover{background:var(--navy-tint)}
 @media(max-width:880px){.contact-grid{grid-template-columns:1fr;gap:40px}}
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
 .foot-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.1)}
 .foot-brand .brand-mark{color:#fff}
@@ -296,26 +295,28 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
 @media(max-width:880px){.foot-top{grid-template-columns:1fr 1fr;row-gap:32px}}
 @media(max-width:540px){.foot-top{grid-template-columns:1fr}}
 
-/* ── RESPONSIVE ── */
+
+/* Mobile nav social icons */
+.mobile-social{display:flex;gap:10px;padding:18px 0 6px;border-top:1px solid var(--line-soft);margin-top:8px;flex-wrap:wrap}
+.mobile-social a{width:38px;height:38px;border-radius:50%;background:var(--navy-tint);border:1px solid var(--navy-tint-2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .15s ease}
+.mobile-social a:hover{background:var(--navy-tint-2)}
+.mobile-social svg{width:15px;height:15px;stroke:var(--navy);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+/* RESPONSIVE */
 @media(max-width:880px){
   .nav-links{display:none}
   .nav-toggle{display:block}
   section{padding:76px 0}
-  .stats .wrap{grid-template-columns:1fr 1fr}
-  .stat:nth-child(3){border-left:none}
 }
 @media(max-width:540px){
   .wrap{padding:0 22px}
   .nav-inner{padding:0 22px}
-  .stats .wrap{grid-template-columns:1fr}
-  .stat{border-left:none!important;border-top:1px solid var(--line)}
-  .stat:first-child{border-top:none}
 }
 </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
+<!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#top" class="brand">
@@ -343,10 +344,24 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
     <a href="#newsletter">Newsletter</a>
     <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
+    <div class="mobile-social">
+      <a href="https://www.instagram.com/drbarnabasamu?igsh=MWtmamJxY3UxNWYxNQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="var(--navy)" stroke="none"/></svg>
+      </a>
+      <a href="https://www.linkedin.com/in/barnabasamu?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+      </a>
+      <a href="https://youtube.com/@drbarnabasamu?si=xdGzHIdS3oGREZdR" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M22 8s-.3-2-1.2-2.8c-1.1-1.2-2.4-1.2-3-1.3C15.2 3.8 12 3.8 12 3.8s-3.2 0-5.8.1c-.6.1-1.9.1-3 1.3C2.3 6 2 8 2 8S1.8 10.2 1.8 12.5v2.1c0 2.2.2 4.4.2 4.4s.3 2 1.2 2.8c1.1 1.2 2.6 1.1 3.2 1.2C8.2 23 12 23 12 23s3.2 0 5.8-.2c.6-.1 1.9-.1 3-1.2.9-.8 1.2-2.8 1.2-2.8s.2-2.2.2-4.4v-2.1C22.2 10.2 22 8 22 8z"/><polygon points="10,8.5 10,15.5 16,12" fill="var(--navy)" stroke="none"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@drbarnabas?_r=1&_t=ZS-97dkiwh0Poa" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+      </a>
+    </div>
   </div>
 </nav>
 
-<!-- ── SOCIAL RAIL — fixed right, fades at contact ── -->
+<!-- SOCIAL RAIL -->
 <div class="social-rail" id="socialRail" aria-label="Social media links">
   <a href="https://www.instagram.com/drbarnabasamu?igsh=MWtmamJxY3UxNWYxNQ==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
     <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="#fff" stroke="none"/></svg>
@@ -364,13 +379,13 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
 
 <div id="top"></div>
 
-<!-- ── HERO ── -->
+<!-- HERO -->
 <header class="hero">
   <div class="wrap hero-inner reveal">
-    <span class="eyebrow">A.B Consulting · Developing People, Delivering Possibilities</span>
-    <h1 class="serif">Keep Showing<br>Up.</h1>
-    <!-- FIX: updated lead text to encapsulate incremental improvement concept -->
-    <p class="lead">Small daily improvements, compounded over time, produce extraordinary results. We build the systems, accountability structures and habits that make showing up sustainable — so progress never depends on how you feel.</p>
+    <span class="eyebrow">A.B Consulting</span>
+    <h1 class="serif">Developing People.<br>Delivering Possibilities.</h1>
+    <p class="hero-tagline">Keep Showing Up</p>
+    <p class="lead">Small daily improvements, compounded over time, produce extraordinary results. We build the systems, accountability structures and habits that make showing up sustainable, so progress never depends on how you feel.</p>
     <div class="hero-ctas">
       <a href="https://tr.ee/EsaV-38MVK" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book a Session</a>
       <a href="#services" class="btn btn-outline">Explore Our Work</a>
@@ -380,156 +395,175 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
 
 <div class="page-content">
 
-<!-- ── STATS ── -->
-<section class="stats" style="padding:0">
-  <div class="wrap">
-    <div class="stat reveal">
-      <span class="stat-num">7+</span>
-      <span class="stat-label">Years building people across leadership, education and personal development</span>
-    </div>
-    <div class="stat reveal">
-      <span class="stat-num">30</span>
-      <span class="stat-label">Day structured programs — for individuals and teams</span>
-    </div>
-    <div class="stat reveal">
-      <span class="stat-num">4x</span>
-      <span class="stat-label">Quarterly CAP cohorts running every year</span>
-    </div>
-    <div class="stat reveal">
-      <span class="stat-num">2</span>
-      <span class="stat-label">Audiences served — people, and the organizations they work for</span>
-    </div>
-  </div>
-</section>
-
-<!-- ── SERVICES — expanded detailed cards ── -->
+<!-- SERVICES: two-column accordion -->
 <section id="services">
   <div class="wrap">
     <div class="shead reveal">
       <span class="eyebrow">What We Do</span>
-      <h2>Work built for <em>people</em>,<br>and the <em>organizations</em> they belong to.</h2>
-      <p>Whether you are leading yourself or leading a team, A.B Consulting builds the structure that turns intention into consistent, compounding action.</p>
+      <p>Whether you are leading yourself or leading a team, A.B Consulting builds the structure that turns intention into consistent, compounding action. Click any service to learn more.</p>
     </div>
 
-    <div class="svc-grid reveal">
+    <div class="svc-two-col reveal">
 
-      <!-- Individual: Coaching -->
-      <div class="svc-card">
-        <div class="svc-card-top">
-          <div class="svc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
-          <div class="svc-card-meta">
-            <span class="svc-card-badge">For Individuals</span>
-            <h4>1-on-1 Leadership Coaching</h4>
+      <!-- LEFT: Individuals -->
+      <div class="svc-col">
+        <div class="svc-col-head">
+          <span class="track-tag">For Individuals</span>
+          <p class="svc-col-title">Built around you.</p>
+          <p class="svc-col-desc">Structured, personal and built to fit the season of life you are actually in.</p>
+        </div>
+
+        <!-- 1-on-1 Coaching -->
+        <div class="acc-item">
+          <button class="acc-btn" aria-expanded="false">
+            <div class="acc-btn-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+            </div>
+            <span class="acc-title">1-on-1 Leadership Coaching</span>
+            <svg class="acc-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <p class="acc-desc">Structured, personalised sessions with Dr. B that sharpen how you think, decide, communicate and show up as a leader, in your career, your business and your life.</p>
+              <ul class="acc-list">
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>A clarity session to map where you are and where you are going</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Focused sessions on decision-making, communication and leadership presence</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Honest, direct feedback built around your real season of life</li>
+              </ul>
+              <div class="acc-cta">
+                <a href="https://tr.ee/EsaV-38MVK" target="_blank" rel="noopener noreferrer">Book a clarity session <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
           </div>
         </div>
-        <p class="svc-desc">Structured, personalised sessions with Dr. B that sharpen how you think, decide, communicate and show up as a leader — in your career, your business and your life.</p>
-        <ul class="svc-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A clarity session to map where you are and where you are going</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Focused sessions on decision-making, communication and leadership presence</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Honest, direct feedback built around your real season of life</li>
-        </ul>
-        <div class="svc-cta">
-          <a href="https://tr.ee/EsaV-38MVK" target="_blank" rel="noopener noreferrer">Book a clarity session <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+        <!-- PAP -->
+        <div class="acc-item">
+          <button class="acc-btn" aria-expanded="false">
+            <div class="acc-btn-icon">
+              <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <span class="acc-title">Personal Accountability Program</span>
+            <svg class="acc-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <p class="acc-desc">A 30-day structured program built entirely around your goal. Every day has a minimum viable action, a tracking system and a reflection, designed so that progress does not require peak motivation.</p>
+              <ul class="acc-list">
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Goal clarity and daily action planning tailored to your actual life</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>A dedicated workbook with 30 days of logged, honest accountability</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Hard day protocols so one bad day does not end the streak</li>
+              </ul>
+              <div class="acc-cta">
+                <a href="https://docs.google.com/forms/d/1bp5OOwKTZVqSGWvEeaeBF2_JDgv9NaaP9UCXbjC7O3I/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">Apply for PAP <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CAP -->
+        <div class="acc-item">
+          <button class="acc-btn" aria-expanded="false">
+            <div class="acc-btn-icon">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <span class="acc-title">CAP: Community Accountability Program</span>
+            <svg class="acc-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <p class="acc-desc">A paid 30-day group challenge run four times a year. Workout, reading, diet and mindfulness, held together by skin in the game, a daily journal and a community that sees your effort.</p>
+              <ul class="acc-list">
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>A registration fee that makes the commitment real</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Daily journalling structured so only the person who did the work can fill it</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>A peer group showing up with you, every single day</li>
+              </ul>
+              <div class="acc-cta">
+                <a href="https://form.jotform.com/261736118605053" target="_blank" rel="noopener noreferrer">Join the next cohort <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Individual: PAP -->
-      <div class="svc-card">
-        <div class="svc-card-top">
-          <div class="svc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-          <div class="svc-card-meta">
-            <span class="svc-card-badge">For Individuals</span>
-            <h4>Personal Accountability Program</h4>
-          </div>
+      <!-- RIGHT: Organizations -->
+      <div class="svc-col org-col">
+        <div class="svc-col-head">
+          <span class="track-tag">For Organizations</span>
+          <p class="svc-col-title">Built around your team.</p>
+          <p class="svc-col-desc">Practical, facilitated experiences that strengthen culture, leadership and performance.</p>
         </div>
-        <p class="svc-desc">A 30-day structured program built entirely around your goal. Every day has a minimum viable action, a tracking system and a reflection — designed so that progress does not require peak motivation.</p>
-        <ul class="svc-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Goal clarity and daily action planning tailored to your actual life</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A dedicated workbook with 30 days of logged, honest accountability</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Hard day protocols so one bad day does not end the streak</li>
-        </ul>
-        <div class="svc-cta">
-          <a href="https://docs.google.com/forms/d/1bp5OOwKTZVqSGWvEeaeBF2_JDgv9NaaP9UCXbjC7O3I/edit?usp=drivesdk" target="_blank" rel="noopener noreferrer">Apply for PAP <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </div>
 
-      <!-- Individual: CAP -->
-      <div class="svc-card">
-        <div class="svc-card-top">
-          <div class="svc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-          <div class="svc-card-meta">
-            <span class="svc-card-badge">For Individuals · Quarterly</span>
-            <h4>CAP — Community Accountability Program</h4>
+        <!-- Corporate Retreats -->
+        <div class="acc-item">
+          <button class="acc-btn" aria-expanded="false">
+            <div class="acc-btn-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+            </div>
+            <span class="acc-title">Corporate Retreats</span>
+            <svg class="acc-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <p class="acc-desc">Facilitated offsite experiences that pull your team out of the daily grind and back into alignment, around purpose, culture and the direction the organisation is moving in.</p>
+              <ul class="acc-list">
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Custom facilitation built around your organisation's actual challenges</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Structured sessions on vision, culture and team accountability</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Clear action plans your team leaves with, not just motivation</li>
+              </ul>
+              <div class="acc-cta">
+                <a href="https://tr.ee/EsaV-38MVK" target="_blank" rel="noopener noreferrer">Enquire about a retreat <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
           </div>
         </div>
-        <p class="svc-desc">A paid 30-day group challenge run four times a year. Workout, reading, diet and mindfulness — held together by skin in the game, a daily journal and a community that sees your effort.</p>
-        <ul class="svc-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A registration fee that makes the commitment real</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Daily journalling structured so only the person who did the work can fill it</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>A peer group showing up with you — every single day</li>
-        </ul>
-        <div class="svc-cta">
-          <a href="https://form.jotform.com/261736118605053" target="_blank" rel="noopener noreferrer">Join the next cohort <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </div>
 
-      <!-- Org: Corporate Retreats -->
-      <div class="svc-card org">
-        <div class="svc-card-top">
-          <div class="svc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></div>
-          <div class="svc-card-meta">
-            <span class="svc-card-badge">For Organizations</span>
-            <h4>Corporate Retreats</h4>
+        <!-- Team Retreats -->
+        <div class="acc-item">
+          <button class="acc-btn" aria-expanded="false">
+            <div class="acc-btn-icon">
+              <svg viewBox="0 0 24 24"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg>
+            </div>
+            <span class="acc-title">Team Recreational Retreats</span>
+            <svg class="acc-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <p class="acc-desc">Structured time away that strengthens the relationships within your team, without losing sight of growth. Rest and connection done intentionally produce the kind of trust that shows up in performance.</p>
+              <ul class="acc-list">
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Curated activities that build genuine connection, not forced fun</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Light facilitation woven in so learning does not feel like work</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Teams that return re-energised, not just rested</li>
+              </ul>
+              <div class="acc-cta">
+                <a href="https://tr.ee/EsaV-38MVK" target="_blank" rel="noopener noreferrer">Plan a team retreat <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
           </div>
         </div>
-        <p class="svc-desc">Facilitated offsite experiences that pull your team out of the daily grind and back into alignment — around purpose, culture and the direction the organisation is moving in.</p>
-        <ul class="svc-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Custom facilitation built around your organisation's actual challenges</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Structured sessions on vision, culture and team accountability</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Clear action plans your team leaves with — not just motivation</li>
-        </ul>
-        <div class="svc-cta">
-          <a href="https://tr.ee/EsaV-38MVK" target="_blank" rel="noopener noreferrer">Enquire about a retreat <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </div>
 
-      <!-- Org: Team Retreats -->
-      <div class="svc-card org">
-        <div class="svc-card-top">
-          <div class="svc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0-3-3.87"/></svg></div>
-          <div class="svc-card-meta">
-            <span class="svc-card-badge">For Organizations</span>
-            <h4>Team Recreational Retreats</h4>
+        <!-- Executive Training -->
+        <div class="acc-item">
+          <button class="acc-btn" aria-expanded="false">
+            <div class="acc-btn-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+            </div>
+            <span class="acc-title">Executive Training</span>
+            <svg class="acc-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-body">
+            <div class="acc-body-inner">
+              <p class="acc-desc">Practical training for leadership teams navigating growth, change and decisions under pressure. Built around the economics of leadership; what it actually costs to lead well at the highest level.</p>
+              <ul class="acc-list">
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Frameworks for decision-making, accountability and strategic communication</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Designed for senior leaders and high-potential teams</li>
+                <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Delivered in-person or virtually, tailored to your sector</li>
+              </ul>
+              <div class="acc-cta">
+                <a href="https://tr.ee/EsaV-38MVK" target="_blank" rel="noopener noreferrer">Discuss your team's needs <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+              </div>
+            </div>
           </div>
-        </div>
-        <p class="svc-desc">Structured time away that strengthens the relationships within your team — without losing sight of growth. Rest and connection done intentionally produce the kind of trust that shows up in performance.</p>
-        <ul class="svc-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Curated activities that build genuine connection, not forced fun</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Light facilitation woven in — learning that does not feel like work</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Teams that return re-energised, not just rested</li>
-        </ul>
-        <div class="svc-cta">
-          <a href="https://tr.ee/EsaV-38MVK" target="_blank" rel="noopener noreferrer">Plan a team retreat <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        </div>
-      </div>
-
-      <!-- Org: Executive Training -->
-      <div class="svc-card org">
-        <div class="svc-card-top">
-          <div class="svc-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div>
-          <div class="svc-card-meta">
-            <span class="svc-card-badge">For Organizations</span>
-            <h4>Executive Training</h4>
-          </div>
-        </div>
-        <p class="svc-desc">Practical training for leadership teams navigating growth, change and decisions under pressure. Built around the economics of leadership — what it actually costs to lead well at the highest level.</p>
-        <ul class="svc-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Frameworks for decision-making, accountability and strategic communication</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Designed for senior leaders and high-potential teams</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Delivered in-person or virtually, tailored to your sector</li>
-        </ul>
-        <div class="svc-cta">
-          <a href="https://tr.ee/EsaV-38MVK" target="_blank" rel="noopener noreferrer">Discuss your team's needs <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
 
@@ -537,7 +571,7 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
   </div>
 </section>
 
-<!-- ── ABOUT — moved up, no credential boxes ── -->
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="wrap">
     <div class="shead reveal" style="margin-bottom:48px">
@@ -549,17 +583,17 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
         <img src="asset/drb.png" alt="Barnabas Amu, PhD">
       </div>
       <div>
-        <p class="role">Barnabas Amu, PhD — Founder &amp; Lead Consultant</p>
+        <p class="role">Barnabas Amu, PhD, Founder and Lead Consultant</p>
         <p class="bio">Barnabas Amu, PhD is an economist, educator and leader with a deep commitment to developing people and unlocking human potential. He serves as Executive Director of City College of Education and Abuja International Academy, where he has spent years building institutions and the people inside them.</p>
-        <p class="bio">He founded A.B Consulting to bring that same discipline to individuals and organizations outside the classroom — through structured coaching, corporate training and the accountability systems he is best known for. Known to his community as Dr. B, he believes that the gap between who you are and who you are becoming is closed one daily decision at a time.</p>
+        <p class="bio">He founded A.B Consulting to bring that same discipline to individuals and organizations outside the classroom; through structured coaching, corporate training and the accountability systems he is best known for. Known to his community as Dr. B, he believes that the gap between who you are and who you are becoming is closed one daily decision at a time.</p>
         <p class="bio">Through Becoming Better with Dr. B, he hosts a growing community built around one idea: consistency, properly understood, is not a personality trait. It is a decision made in advance.</p>
-        <p class="about-quote">"Developing people is the most valuable investment any organization — or any individual — can make."</p>
+        <p class="about-quote">"Developing people is the most valuable investment any organization, or any individual, can make."</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── EVENTS ── -->
+<!-- EVENTS -->
 <section id="events" class="events">
   <div class="wrap">
     <div class="shead reveal">
@@ -571,14 +605,14 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
         <span class="event-date">Annually</span>
         <div class="event-info">
           <h4>Becoming Better Conference</h4>
-          <p>Our flagship annual convergence for the Becoming Better community — inspiring change, growth and transformation.</p>
+          <p>Our flagship annual convergence for the Becoming Better community; inspiring change, growth and transformation.</p>
         </div>
         <span class="event-cadence">Recurring</span>
       </div>
       <div class="event-row">
         <span class="event-date">Quarterly</span>
         <div class="event-info">
-          <h4>CAP — New Cohort Opens</h4>
+          <h4>CAP: New Cohort Opens</h4>
           <p>Registration opens for the next 30-day Community Accountability Program.</p>
         </div>
         <span class="event-cadence">Recurring</span>
@@ -587,7 +621,7 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
         <span class="event-date">Monthly</span>
         <div class="event-info">
           <h4>Lecture Series</h4>
-          <p>A focused lecture on leadership, consistency and personal development — open to all on YouTube.</p>
+          <p>A focused lecture on leadership, consistency and personal development, open to all on YouTube.</p>
         </div>
         <span class="event-cadence">Recurring</span>
       </div>
@@ -598,13 +632,13 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
   </div>
 </section>
 
-<!-- ── NEWSLETTER ── -->
+<!-- NEWSLETTER -->
 <section id="newsletter">
   <div class="wrap news-grid">
     <div class="reveal">
       <span class="eyebrow">Every Friday</span>
       <h2>Becoming Better<br>This Weekend.</h2>
-      <p class="desc">A short, honest newsletter on discipline, leadership and personal growth — sent every Friday. No noise, no filler.</p>
+      <p class="desc">A short, honest newsletter on discipline, leadership and personal growth, sent every Friday. No noise, no filler.</p>
       <form class="news-form" onsubmit="return false;">
         <div class="field">
           <input type="email" placeholder="Enter your email address" required>
@@ -616,33 +650,33 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
     <div class="subst-card reveal">
       <div class="tag"><span class="subst-dot"></span><span>Read on Substack</span></div>
       <h4>Becoming Better with Dr. B</h4>
-      <p>The full newsletter archive lives on Substack — read past editions, subscribe directly, and never miss a Friday.</p>
-      <a href="https://barnabasamu.substack.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Read on Substack →</a>
+      <p>The full newsletter archive lives on Substack. Read past editions, subscribe directly and never miss a Friday.</p>
+      <a href="https://barnabasamu.substack.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Read on Substack</a>
     </div>
   </div>
 </section>
 
-<!-- ── QUOTE ── -->
+<!-- QUOTE -->
 <section class="quote-section">
   <div class="wrap reveal">
     <span class="quote-mark">&ldquo;</span>
-    <p class="quote-text">Developing people is the most valuable investment any organization — or any individual — can make.</p>
+    <p class="quote-text">Developing people is the most valuable investment any organization, or any individual, can make.</p>
     <p class="quote-by">Barnabas Amu, PhD &middot; Founder, A.B Consulting</p>
   </div>
 </section>
 
-<!-- ── COMMUNITY ── -->
+<!-- COMMUNITY -->
 <section class="community">
   <div class="wrap comm-inner reveal">
     <div>
       <h3>Join the Becoming Better community.</h3>
-      <p>Free, active, and built around daily encouragement, shared habits and people who are serious about growth.</p>
+      <p>Free, active and built around daily encouragement, shared habits and people who are serious about growth.</p>
     </div>
     <a href="https://chat.whatsapp.com/LA8G5MjtGHXCkwbqVpPUIh?mode=gi_t" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Join the Community</a>
   </div>
 </section>
 
-<!-- ── FAQ ── -->
+<!-- FAQ -->
 <section id="faq">
   <div class="wrap">
     <div class="shead reveal">
@@ -652,11 +686,11 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
     <div class="faq-list reveal">
       <div class="faq-item">
         <button class="faq-q">Is A.B Consulting for individuals or for businesses?<span class="plus"></span></button>
-        <div class="faq-a"><p>Both. Our work runs on two tracks — 1-on-1 coaching and structured programs for individuals, and retreats, training and consulting for organizations. Many of our individual clients first encounter us through their workplace, and many organizations come to us after a leader has been through PAP.</p></div>
+        <div class="faq-a"><p>Both. Our work runs on two tracks; 1-on-1 coaching and structured programs for individuals, and retreats, training and consulting for organizations. Many of our individual clients first encounter us through their workplace, and many organizations come to us after a leader has been through PAP.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">What is the difference between PAP and CAP?<span class="plus"></span></button>
-        <div class="faq-a"><p>PAP — the Personal Accountability Program — is a personalised 30-day system built around your individual goal, worked through 1-on-1 with Dr. B. CAP — the Community Accountability Program — is a paid, quarterly group challenge built on four shared daily habits, run with a cohort of peers for collective accountability.</p></div>
+        <div class="faq-a"><p>PAP (the Personal Accountability Program) is a personalised 30-day system built around your individual goal, worked through 1-on-1 with Dr. B. CAP (the Community Accountability Program) is a paid, quarterly group challenge built on four shared daily habits, run with a cohort of peers for collective accountability.</p></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">How do I book a session?<span class="plus"></span></button>
@@ -674,7 +708,7 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
+<!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap">
     <span class="eyebrow reveal">Get In Touch</span>
@@ -704,7 +738,7 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
   </div>
 </section>
 
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot-top">
@@ -721,7 +755,7 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
       </div>
       <div class="foot-col">
         <h5>Community</h5>
-        <a href="https://form.jotform.com/261736118605053" target="_blank" rel="noopener noreferrer">CAP — Quarterly Cohort</a>
+        <a href="https://form.jotform.com/261736118605053" target="_blank" rel="noopener noreferrer">CAP: Quarterly Cohort</a>
         <a href="https://chat.whatsapp.com/LA8G5MjtGHXCkwbqVpPUIh?mode=gi_t" target="_blank" rel="noopener noreferrer">WhatsApp Community</a>
         <a href="https://barnabasamu.substack.com" target="_blank" rel="noopener noreferrer">Newsletter</a>
         <a href="#events">Events</a>
@@ -735,7 +769,7 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 A.B Consulting. All rights reserved.</span>
+      <span>&copy; 2026 A.B Consulting. All rights reserved.</span>
       <div class="foot-social">
         <a href="https://www.instagram.com/drbarnabasamu?igsh=MWtmamJxY3UxNWYxNQ==" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://www.linkedin.com/in/barnabasamu?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -746,14 +780,12 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
   </div>
 </footer>
 
-</div><!-- end .page-content -->
+</div>
 
 <script>
-// Nav scroll state
+// Nav scroll
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  nav.classList.toggle('scrolled', window.scrollY > 12);
-});
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 12));
 
 // Mobile nav
 const navToggle = document.getElementById('navToggle');
@@ -769,30 +801,41 @@ mobilePanel.querySelectorAll('a').forEach(a => a.addEventListener('click', () =>
   navToggle.setAttribute('aria-expanded', false);
 }));
 
-// Social rail — fade out when contact section is in view, shift color in white sections
+// Social rail
 const rail = document.getElementById('socialRail');
 const contactSection = document.getElementById('contact');
-const heroEl = document.querySelector('.hero');
-
 if (rail && contactSection) {
-  // Fade out at contact section
-  const fadeObs = new IntersectionObserver((entries) => {
+  new IntersectionObserver(entries => {
     entries.forEach(e => rail.classList.toggle('hidden', e.isIntersecting));
-  }, { threshold: 0.15 });
-  fadeObs.observe(contactSection);
-
-  // Switch icon color when page-content scrolls in (white bg)
-  const colorObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => rail.classList.toggle('dark', e.isIntersecting));
-  }, { threshold: 0.05 });
+  }, { threshold: 0.15 }).observe(contactSection);
   const pageContent = document.querySelector('.page-content');
-  if (pageContent) colorObs.observe(pageContent);
+  if (pageContent) {
+    new IntersectionObserver(entries => {
+      entries.forEach(e => rail.classList.toggle('dark', e.isIntersecting));
+    }, { threshold: 0.05 }).observe(pageContent);
+  }
 }
+
+// Service accordion
+document.querySelectorAll('.acc-item').forEach(item => {
+  const btn = item.querySelector('.acc-btn');
+  const body = item.querySelector('.acc-body');
+  btn.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    // close siblings in same column
+    item.closest('.svc-col').querySelectorAll('.acc-item.open').forEach(o => {
+      if (o !== item) { o.classList.remove('open'); o.querySelector('.acc-body').style.maxHeight = null; o.querySelector('.acc-btn').setAttribute('aria-expanded','false'); }
+    });
+    item.classList.toggle('open', !isOpen);
+    body.style.maxHeight = !isOpen ? body.scrollHeight + 'px' : null;
+    btn.setAttribute('aria-expanded', !isOpen);
+  });
+});
 
 // Scroll reveal
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!reduceMotion && 'IntersectionObserver' in window) {
-  const io = new IntersectionObserver((entries) => {
+  const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
@@ -814,15 +857,14 @@ document.querySelectorAll('.faq-item').forEach(item => {
   });
 });
 
-// Smooth scroll with nav offset
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const id = a.getAttribute('href').slice(1);
     const target = document.getElementById(id);
     if (target) {
       e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 74;
-      window.scrollTo({ top, behavior: reduceMotion ? 'auto' : 'smooth' });
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 74, behavior: reduceMotion ? 'auto' : 'smooth' });
     }
   });
 });
