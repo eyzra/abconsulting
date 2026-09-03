@@ -394,6 +394,35 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
 /* ── RESPONSIVE ── */
 @media(max-width:880px){.nav-links{display:none}.nav-toggle{display:block}section{padding:76px 0}}
 @media(max-width:540px){.wrap{padding:0 22px}.nav-inner{padding:0 22px}}
+
+/* ── TESTIMONIALS ── */
+.testimonials-section{background:var(--white);padding:108px 0}
+.testimonials-head{margin-bottom:48px}
+.testimonials-scroll-wrap{position:relative}
+.testimonials-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;padding-bottom:4px;cursor:grab;user-select:none}
+.testimonials-scroll::-webkit-scrollbar{display:none}
+.testimonials-scroll.dragging{cursor:grabbing}
+.testimonials-track{display:flex;gap:20px;width:max-content;padding:4px 2px 4px}
+.t-card{width:340px;background:var(--navy-tint);border:1px solid var(--navy-tint-2);
+  border-radius:var(--r-lg);padding:30px 28px;display:flex;flex-direction:column;
+  transition:box-shadow .25s cubic-bezier(.22,.68,0,1.2),transform .25s cubic-bezier(.22,.68,0,1.2)}
+.t-card:hover{box-shadow:0 10px 36px -8px rgba(20,33,61,.14);transform:translateY(-3px)}
+.t-qmark{font-family:var(--font-serif);font-style:italic;font-size:56px;color:var(--navy);
+  opacity:.18;line-height:.9;margin-bottom:6px;display:block}
+.t-text{font-size:14.5px;color:var(--charcoal-soft);line-height:1.72;flex:1;font-style:italic}
+.t-author{margin-top:22px;padding-top:16px;border-top:1px solid var(--navy-tint-2);
+  display:flex;align-items:center;gap:12px}
+.t-avatar{width:38px;height:38px;border-radius:50%;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;font-size:14px;
+  font-weight:700;color:#fff;flex-shrink:0}
+.t-name{font-size:14px;font-weight:700;color:var(--navy)}
+.t-label{font-size:12px;color:var(--charcoal-soft);margin-top:1px}
+.testimonials-scroll-hint{margin-top:20px;font-size:12.5px;color:var(--charcoal-soft);
+  display:flex;align-items:center;gap:6px}
+.testimonials-scroll-hint svg{width:14px;height:14px;stroke:var(--charcoal-soft);
+  fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
 </style>
 </head>
 <body>
@@ -524,14 +553,14 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
 
     <!-- Card 3 -->
     <div class="who-card">
-      <div class="who-card-bg" style="background-image:url(asset/ABCWIDE2.jpeg )"><div>
+      <div class="who-card-bg" style="background-image:url(asset/ABCWIDE2.jpeg)"></div>
       <div class="who-card-overlay"></div>
       <div class="who-card-content">
         <div class="who-card-header">
           <span class="who-card-tag">Our Commitment</span>
           <button class="who-card-plus" aria-label="Expand">
             <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-          </button> 
+          </button>
         </div>
         <div class="who-card-foot">
           <h3 class="who-card-title">We show up.</h3>
@@ -545,7 +574,7 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
 
     <!-- Card 4 -->
     <div class="who-card">
-      <div class="who-card-bg" style="background:linear-gradient(140deg,#0A1A0A 0%,#14213D 50%,#0A1222 100%)"></div>
+      <div class="who-card-bg" style="background-image:url(asset/ABC2.jpg)"></div>
       <div class="who-card-overlay"></div>
       <div class="who-card-content">
         <div class="who-card-header">
@@ -713,6 +742,93 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
   </div>
 </section>
 
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section" id="testimonials">
+  <div class="wrap">
+    <div class="shead testimonials-head reveal">
+      <span class="eyebrow">What People Are Saying</span>
+      <h2>Real sessions. Real <em>change.</em></h2>
+      <p>These are direct words from members of the Becoming Better community who completed their One on One Clarity Session with Dr. B.</p>
+    </div>
+  </div>
+  <div class="wrap" style="padding-right:0;max-width:100%">
+    <div class="testimonials-scroll-wrap">
+      <div class="testimonials-scroll reveal" id="testimonialsScroll">
+        <div class="testimonials-track" style="padding-right:32px">
+
+          <div class="t-card">
+            <span class="t-qmark">&ldquo;</span>
+            <p class="t-text">Dr. Barnabas provided timely, practical solutions that will greatly improve my leadership skills. I left feeling more equipped, encouraged, and confident about leading effectively. Thank you for your wisdom, guidance, and valuable insights.</p>
+            <div class="t-author">
+              <div class="t-avatar">H</div>
+              <div>
+                <p class="t-name">Hannah</p>
+                <p class="t-label">Clarity Session Graduate</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-card">
+            <span class="t-qmark">&ldquo;</span>
+            <p class="t-text">Now I see: if you don't know how to cook, just cook. Who told you your first time should be great? Discover what you are good at, what people compliment you for, and use it. Everyone has what they are good at. I didn't leave that meeting the same.</p>
+            <div class="t-author">
+              <div class="t-avatar">O</div>
+              <div>
+                <p class="t-name">Obinna</p>
+                <p class="t-label">Clarity Session Graduate</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-card">
+            <span class="t-qmark">&ldquo;</span>
+            <p class="t-text">What stood out most wasn't being given answers. It was being guided to ask myself the right questions. One question in particular stayed with me: Why? That simple question led me to a level of introspection I hadn't taken the time to do before. I left with greater clarity and a renewed perspective.</p>
+            <div class="t-author">
+              <div class="t-avatar">T</div>
+              <div>
+                <p class="t-name">Temitope</p>
+                <p class="t-label">Clarity Session Graduate</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-card">
+            <span class="t-qmark">&ldquo;</span>
+            <p class="t-text">It helped me reflect on what to do and how to become a better version of myself, and how to make a bold decision. Thank you for creating an honest and safe space to talk and ask questions that inspire real growth.</p>
+            <div class="t-author">
+              <div class="t-avatar">C</div>
+              <div>
+                <p class="t-name">Cindy</p>
+                <p class="t-label">Clarity Session Graduate</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="t-card">
+            <span class="t-qmark">&ldquo;</span>
+            <p class="t-text">He helped me sift through the mental clutter that had been clouding my judgment. He challenged my perspective, enabling me to reframe how I view my circumstances and identify the opportunities hidden within them. The words that impacted me most: &ldquo;I'm rooting for you, Victory.&rdquo;</p>
+            <div class="t-author">
+              <div class="t-avatar">V</div>
+              <div>
+                <p class="t-name">Victory</p>
+                <p class="t-label">Clarity Session Graduate</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="testimonials-scroll-hint">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          Scroll to read more
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- WHY DR. B -->
 <section class="why-section" id="why">
   <div class="wrap">
@@ -730,7 +846,7 @@ footer{background:var(--navy-deep);color:#fff;padding:64px 0 32px}
         <a href="https://tr.ee/EsaV-38MVK" target="_blank" rel="noopener noreferrer" class="btn btn-outline-light">Book a Session</a>
       </div>
       <div class="why-img">
-        <img src="asset/ABCDRB.jpg" alta="Dr. B speaking" onerror="this.style.display='none'">
+        <img src="asset/ABCDRB.jpg" alt="Dr. B speaking" onerror="this.style.display='none'">
       </div>
     </div>
   </div>
@@ -1082,6 +1198,37 @@ if('IntersectionObserver' in window && !rm){
     if(e.isIntersecting){ animateCount(e.target); co.unobserve(e.target); }
   }), {threshold:0.5});
   statNums.forEach(el => co.observe(el));
+}
+
+
+// ── TESTIMONIALS DRAG SCROLL ──
+const tScroll = document.getElementById('testimonialsScroll');
+if(tScroll){
+  let isDragging = false, startX = 0, scrollLeft = 0;
+  tScroll.addEventListener('mousedown', e => {
+    isDragging = true;
+    tScroll.classList.add('dragging');
+    startX = e.pageX - tScroll.offsetLeft;
+    scrollLeft = tScroll.scrollLeft;
+  });
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    tScroll.classList.remove('dragging');
+  });
+  tScroll.addEventListener('mousemove', e => {
+    if(!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - tScroll.offsetLeft;
+    tScroll.scrollLeft = scrollLeft - (x - startX) * 1.2;
+  });
+  tScroll.addEventListener('touchstart', e => {
+    startX = e.touches[0].pageX - tScroll.offsetLeft;
+    scrollLeft = tScroll.scrollLeft;
+  }, {passive:true});
+  tScroll.addEventListener('touchmove', e => {
+    const x = e.touches[0].pageX - tScroll.offsetLeft;
+    tScroll.scrollLeft = scrollLeft - (x - startX);
+  }, {passive:true});
 }
 
 // ── SMOOTH SCROLL ──
